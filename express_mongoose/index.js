@@ -2,6 +2,7 @@ const express = require("express");
 const { meetupRouter } = require("./routers/meetup");
 const createConnection = require("./db");
 const app = express();
+app.use(express.json());
 
 createConnection().then(() => {
   console.log("MongoDb connected");
